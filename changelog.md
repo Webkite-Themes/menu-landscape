@@ -4,4 +4,6 @@
 
 ###0.1.0
 
-* Initial work on the menu theme
+* Initial release of the menu theme
+* All prices assume dollars currently
+* No images
