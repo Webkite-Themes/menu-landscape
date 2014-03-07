@@ -115,7 +115,7 @@ $mainGutter: 1.25em;
       }
     /* light theme only */
     .webkite-branding-area a {
-      background: url("branding-light.svg") center top no-repeat;
+      background: url("branding-dark.svg") center top no-repeat;
       display: inline-block;
       height: 2.813em;
       width: 8.5em;
@@ -145,7 +145,7 @@ $mainGutter: 1.25em;
     height: 2em;
     text-align: left;
     i{
-      background: url("angle-light.png") center center no-repeat;
+      background: url("angle-dark.png") center center no-repeat;
       display: inline-block;
       height: 10px;
       margin-left: $mainGutter/2;
@@ -408,7 +408,7 @@ $mainGutter: 1.25em;
     padding: $mainGutter/4;
     max-width: 1.5em; 
     font-size: .9em;
-    color: $lightOpacity;
+    color: $lightOpacity/2;
     }
   /* remove arrows */
   .webkite-page-input::-webkit-outer-spin-button,
