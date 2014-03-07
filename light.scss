@@ -82,13 +82,18 @@ $mainGutter: 1.25em;
   
 /* TYPOGRAPHY */
 #webkite-results{
-  h1, h2{
+  h1, h2, h3{
     margin: 0;
     }
   h2{
     @include hyphenGreat;
-    display: inline-block;
-    font: 700 1.5em/1 "Open Sans";
+    display: inline;
+    font: normal 2.25em/1 Georgia, serif;
+    color: $medOpacity;
+    }
+  h3{
+    display: inline;
+    font: bold 1.5em/1 Georgia, serif;
     color: $medOpacity;
     }
   p, li{
@@ -121,6 +126,7 @@ $mainGutter: 1.25em;
     }
     
   } 
+
 /************************************************* SORTS */
 #webkite-results{
 
@@ -153,6 +159,7 @@ $mainGutter: 1.25em;
     }
   
   }
+
 /********************************************* SORT MENU */
 #webkite-results{
 
@@ -202,7 +209,6 @@ $mainGutter: 1.25em;
     }
   
   }
-
 
 /************************************************ FILTERS */
 #webkite-results{
@@ -379,6 +385,7 @@ $mainGutter: 1.25em;
     }
   
   }
+
 /********************************************* PAGINATION */
 #webkite-results{
 
@@ -429,8 +436,8 @@ $mainGutter: 1.25em;
         list-style-type: none;
         text-align: justify;
         padding-bottom: $mainGutter/2;
-        b{display: inline-block; text-align: left; width: 39%; vertical-align: text-top;font-weight: 700;}
-        span.facet-values{@extend b; width:59%; font-weight: 400;}
+        b{display: inline-block; text-align: left; width: 49%; vertical-align: text-top;font-weight: 700;}
+        span.facet-values{@extend b; width:49%; font: normal 1em/1 Georgia, serif;}
         .city, .state{display: inline;}
         .city + .state:before{content: ", ";}
         }  
@@ -442,11 +449,22 @@ $mainGutter: 1.25em;
       @include roundedUp(0.188em);
       }
     }
+  .webkite-block.full{
+    width: 100%;
+    margin-bottom: $mainGutter;
+    padding: 0;
+    }
+  .webkite-block.seventy{
+    width: 69%;
+    }
   .webkite-block.sixty{
     width: 59%;
     }
   .webkite-block.forty{
    width: 39%;
+    }
+  .webkite-block.thirty{
+    width: 29%;
     }
   
   }
@@ -458,6 +476,14 @@ $mainGutter: 1.25em;
     text-align: justify;
     position: relative;
     @include breakThat;
+    }
+  .price{
+    text-align: right;
+    &:before{
+      content: "$ ";
+      color: $lightOpacity;
+      font: bold 1em/1 Georgia, serif;
+      }
     }
   a.more-button, a.less-button{
     @include boxedUp;
@@ -585,7 +611,7 @@ $mainGutter: 1.25em;
     padding-left: 0;
     }
   .webkite-block ul li{
-    b, a, span{width: 100%;}
+    b, a, .facet-values{width: 100%;}
     .webkite-toggle{width: auto;}
     }
   .webkite-block .inline-filter-menu li a{
@@ -619,7 +645,7 @@ $mainGutter: 1.25em;
     padding-left: 0;
     }
   .webkite-block ul li{
-    b, a, span{width: 100%;}
+    b, a, .facet-values{width: 100%;}
     .webkite-toggle{width: auto;}
     }
   }

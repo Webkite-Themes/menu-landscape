@@ -7,30 +7,68 @@
 {{#if items.length}}
 {{#each this.items}}
 <section class="webkite-result">
-	<div class="webkite-block forty">
-	  {{#facet name="Image"}}<img src="{{displayValue}}"/>{{/facet}}
-	  {{#facet name="First Name"}}<h2>{{displayValue}} </h2>{{/facet}} 
-	   {{#facet name="Last Name"}}<h2>{{displayValue}}</h2>{{/facet}}
-	</div><!--webkite-block-forty-->
-	<div class="webkite-block sixty">
+	<div class="webkite-block full">
+	  <div class="webkite-block seventy">{{#facet name="Item Name"}}<h2>{{displayValue}}</h2>{{/facet}}</div>
+	  <div class="webkite-block thirty price">{{#facet name="Price"}}<h3>{{displayValue}}</h3>{{/facet}}</div>
+	</div><!--webkite-block-full-->
+	<div class="webkite-block full">
+  	<div class="webkite-block sixty">
+  	{{#facet name="Description"}}<p>{{displayValue}}</p>{{/facet}}
+	</div>
+  	<div class="webkite-block forty">
   	<ul>
   	  <li>
-  	    <b>address</b>
-  	    <span class="facet-values">
-        <a target="_blank" href="http://maps.google.com/?q={{#facet name='Address 1'}}{{displayValue}}{{/facet}} {{#facet name='City'}}{{displayValue}}{{/facet}} {{#facet name='State'}}{{displayValue}}{{/facet}} {{#facet name='Zip Code'}}{{displayValue}}{{/facet}} {{#facet name='Country'}}{{displayValue}}{{/facet}}">
-        {{#facet name="Address 1"}}<span>{{displayValue}}</span>{{/facet}}
-          {{#facet name="Address 2"}}<span>{{displayValue}}</span>{{/facet}}
-          <span>{{#facet name="City"}}<span class="city">{{displayValue}}</span>{{/facet}}{{#facet name="State"}}<span class="state">{{displayValue}}</span>{{/facet}}
-          {{#facet name="Zip Code"}}{{displayValue}}{{/facet}}</span>
-        </a>
-  	    </span>
-      </li>
-      <li>
-        <b>email</b>
-        {{#facet name="Email"}}
+          {{#facet name="Meal"}}
+            {{#if filterable}}
+            <b class="inline-filter-button">
+            <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+            <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+              {{#each filterableValues}}
+              <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+            {{/each}}
+            </ul>
+            </b>
+          {{else}}
+            <b>{{downcase name}}</b>
+          {{/if}}
+          {{#if filterable}}
+          <span class="facet-values">
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+          {{/each}}
+          </span>
+          {{else}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/if}}
+          {{/facet}}
+        </li>
+        <li>
+        {{#facet name="Dish Type"}}
+          {{#if filterable}}
+          <b class="inline-filter-button">
+          <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+          <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+            {{#each filterableValues}}
+            <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+          {{/each}}
+          </ul>
+          </b>
+        {{else}}
+          <b>{{downcase name}}</b>
+        {{/if}}
+        {{#if filterable}}
         <span class="facet-values">
-        <a href="mailto:{{displayValue}}">{{displayValue}}</a>
+        {{#each values}}
+        <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+        {{/each}}
         </span>
+        {{else}}
+        <span class="facet-values">
+        {{displayValue}}
+        </span>
+        {{/if}}
         {{/facet}}
       </li>
       <li>
@@ -188,7 +226,8 @@
   	</div><!-- webkite-item-details -->
   	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms">more</a>
   	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms">less</a>
-	</div><!--webkite-block sixty-->
+	</div><!--webkite-block forty-->
+	</div><!--webkite-block-full-->
   <footer class="webkite-result-footer"></footer>
 </section>
 {{/each}}
