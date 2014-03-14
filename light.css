@@ -462,7 +462,7 @@
     white-space: pre-line; }
 #webkite-results .price {
   text-align: right; }
-  #webkite-results .price:before {
+  #webkite-results .price h3:before {
     content: "$ ";
     color: rgba(0, 0, 0, 0.6);
     font: bold 1em/1 Georgia, serif; }

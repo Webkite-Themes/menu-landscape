@@ -479,7 +479,7 @@ $mainGutter: 1.25em;
     }
   .price{
     text-align: right;
-    &:before{
+    h3:before{
       content: "$ ";
       color: $lightOpacity;
       font: bold 1em/1 Georgia, serif;
