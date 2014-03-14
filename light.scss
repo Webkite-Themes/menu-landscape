@@ -397,9 +397,11 @@ $mainGutter: 1.25em;
     }
   .first-result-page, .previous-result-page{
     padding-right: $mainGutter/2;
+    &.disabled{color: $lightOpacity;&:hover{color: $lightOpacity;}}
     }
   .next-result-page, .last-result-page{
     padding-left: $mainGutter/2;
+    &.disabled{color: $lightOpacity;&:hover{color: $lightOpacity;}}
     }
   /* page input */
   input.webkite-page-input{
