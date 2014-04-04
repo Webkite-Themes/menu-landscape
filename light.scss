@@ -33,10 +33,10 @@ $colorVariant:light;
     margin: 0;
     }
   h2{
-    @include hyphenGreat;
     display: inline;
     font: normal 2.25em/1 Georgia, serif;
     color: $medOpacity;
+    word-break: normal;
     }
   h3{
     display: inline;
@@ -68,10 +68,9 @@ $colorVariant:light;
         list-style-type: none;
         text-align: justify;
         padding-bottom: $mainGutter/2;
-        b{display: inline-block; text-align: left; width: 49%; vertical-align: text-top;font-weight: 700;}
-        span.facet-values{@extend b; width:49%; font: normal 1em/1 Georgia, serif;}
-        .city, .state{display: inline;}
-        .city + .state:before{content: ", ";}
+        b, span.facet-values{display: inline-block; text-align: left; vertical-align: text-top; width: 49%;}
+        b{font-weight: 700;}
+        span.facet-values{font: 400 1em/1 Georgia, serif;}
         }  
       }
     img {
@@ -152,7 +151,7 @@ $colorVariant:light;
 
   .webkite-block li b{
     position: relative;
-    &.inline-filter-button + .facet-values{padding-top: $mainGutter/4;}
+    &.inline-filter-button + .facet-values{padding-top: $mainGutter/2;}
     > .webkite-toggle{
       @include boxedUp;
       @include roundedUp(.188em);
