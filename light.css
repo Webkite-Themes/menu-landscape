@@ -523,10 +523,6 @@
     margin-bottom: 1.25em; }
 #webkite-results .price {
   text-align: right; }
-  #webkite-results .price h3:before {
-    content: "$ ";
-    color: rgba(0, 0, 0, 0.6);
-    font: bold 1em/1 Georgia, serif; }
 #webkite-results a.more-button, #webkite-results a.less-button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
