@@ -42,7 +42,6 @@
             {{#facet name="Price"}}<h3 class="xs-price xs-only">${{currency displayValue}}</h3>{{/facet}}
             {{#facet name="Description"}}<p class="webkite-description">{{displayValue}}</p>{{/facet}}
           </div>
-          
           <div class="webkite-block thirty price">
             {{#facet name="Price"}}<h3 class="until-xs">${{currency displayValue}}</h3>{{/facet}}
             <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler{{#if showDetails}} webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-speed="200ms">more</a>

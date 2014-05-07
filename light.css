@@ -552,10 +552,8 @@
     content: '';
     display: table;
     clear: both; }
-  #webkite-results .webkite-result:nth-child(odd) {
-    border-right: 1px solid #eaeaea; }
   #webkite-results .webkite-result:nth-child(even) {
-    border-left: 1px solid #eaeaea;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
     margin-left: -1px; }
   #webkite-results .webkite-result h2 {
     line-height: 1.1;
@@ -736,11 +734,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 0 20px;
   padding: 0 0 20px; }
-  #webkite-results.xs .webkite-result:nth-child(odd) {
-    border-right: none; }
   #webkite-results.xs .webkite-result:nth-child(even) {
-    border-left: none;
-    margin-left: 0; }
+    border-left: none; }
   #webkite-results.xs .webkite-result .webkite-item-details .webkite-menu-nutrition {
     font-size: 12px;
     text-align: left;
