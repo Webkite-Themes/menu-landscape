@@ -1,18 +1,18 @@
 {{log this}}
 
-{{#ifCond this.sort.sortableFacets.length "||" this.filters.filterableFacets.length}}
+{{#any this.sort.sortableFacets.length this.filters.filterableFacets.length}}
   <header class="webkite-results-header">
-    {{>sorts this.sort}}
+    {{>sorts this.sort~}}
     {{>filters this.filters}}
   </header>
-{{/ifCond}}
+{{/any}}
 
 <div class="webkite-results-wrapper">
   {{#if items.length}}
     {{#each this.items}}
       <section class="webkite-result webkite-block">
       
-        {{#ifCond (find facets name="Meal") "||" (find facets name="Diet")}}
+        {{#any (find facets name="Meal") (find facets name="Diet")}}
           <div class="webkite-result-header">
             {{#facet name="Meal"}}
               <div class="webkite-meal">
@@ -34,8 +34,7 @@
               </div>
             {{/facet}}
           </div>
-        {{/ifCond}}
-  
+        {{/any}}
   
         <div class="webkite-block full">
           <div class="webkite-block seventy">
@@ -50,7 +49,6 @@
             <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler{{#unless showDetails}} webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-speed="200ms">less</a>
           </div>
         </div>
-        
             
         <div id="{{this.id}}" class="webkite-block full webkite-item-details">
           <div class="webkite-block sixty">
