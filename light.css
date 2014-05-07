@@ -482,22 +482,22 @@
   box-sizing: border-box; }
   #webkite-results .webkite-block:first-child {
     padding-right: 10px; }
-#webkite-results .webkite-block.full {
-  width: 100%;
-  padding: 0;
-  text-align: justify; }
-  #webkite-results .webkite-block.full::after {
-    content: '';
-    display: table;
-    clear: both; }
-#webkite-results .webkite-block.seventy {
-  width: 69%; }
-#webkite-results .webkite-block.sixty {
-  width: 59%; }
-#webkite-results .webkite-block.forty {
-  width: 39%; }
-#webkite-results .webkite-block.thirty {
-  width: 29%; }
+  #webkite-results .webkite-block.full {
+    width: 100%;
+    padding: 0;
+    text-align: justify; }
+    #webkite-results .webkite-block.full::after {
+      content: '';
+      display: table;
+      clear: both; }
+  #webkite-results .webkite-block.seventy {
+    width: 70%; }
+  #webkite-results .webkite-block.sixty {
+    width: 60%; }
+  #webkite-results .webkite-block.forty {
+    width: 40%; }
+  #webkite-results .webkite-block.thirty {
+    width: 30%; }
 
 /********************************************** LISTS */
 #webkite-results ul.webkite-list-grid {
@@ -581,8 +581,7 @@
   #webkite-results .webkite-result-header .webkite-meal + .webkite-diet {
     margin-top: 1px; }
 #webkite-results .price {
-  text-align: right;
-  float: right; }
+  text-align: right; }
 #webkite-results a.more-button, #webkite-results a.less-button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -617,7 +616,6 @@
   #webkite-results .webkite-result .webkite-item-details .webkite-menu-nutrition {
     font-size: 11px;
     text-align: right;
-    float: right;
     color: rgba(0, 0, 0, 0.6);
     line-height: 1.2; }
     #webkite-results .webkite-result .webkite-item-details .webkite-menu-nutrition li + li {

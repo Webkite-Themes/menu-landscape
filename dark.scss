@@ -58,31 +58,22 @@ $colorVariant:dark;
   
 /********************************************** BLOCKS */
 #webkite-results{
-
   .webkite-block{
     display: inline-block;
     vertical-align: top;
     text-align: left;
     @include boxedUp;
     &:first-child{padding-right: $mainGutter/2;}
-    }
-  .webkite-block.full{
-    width: 100%;
-    padding: 0;
-    text-align:justify;
-    @include breakThat;
-    }
-  .webkite-block.seventy{
-    width: 69%;
-    }
-  .webkite-block.sixty{
-    width: 59%;
-    }
-  .webkite-block.forty{
-   width: 39%;
-    }
-  .webkite-block.thirty{
-    width: 29%;
+    &.full{
+      width: 100%;
+      padding: 0;
+      text-align:justify;
+      @include breakThat;
+      }
+    &.seventy{width:70%;}
+    &.sixty{width:60%;}
+    &.forty{width:40%;}
+    &.thirty{width:30%;}
     }
   
   }
@@ -177,7 +168,6 @@ $colorVariant:dark;
     }
   .price{
     text-align: right;
-    float:right;
     }
   a.more-button, a.less-button{
     @include boxedUp;
@@ -207,7 +197,6 @@ $colorVariant:dark;
     .webkite-menu-nutrition {
       font-size:11px;
       text-align:right;
-      float:right;
       color:$lightOpacity;
       line-height:1.2;
       li + li {
