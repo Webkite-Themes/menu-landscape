@@ -9,7 +9,7 @@
 
 <div class="webkite-results-wrapper">
   {{#if items.length}}
-    {{#each this.items}}
+    {{#each this.items~}}
       <section class="webkite-result webkite-block">
       
         {{#any (find facets name="Meal") (find facets name="Diet")}}
@@ -140,7 +140,7 @@
         </div><!-- webkite-item-details -->
         
       </section>
-    {{/each}}
+    {{~/each~}}
   
   {{else}}
     <section class="webkite-no-results">
