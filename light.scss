@@ -109,11 +109,6 @@ $colorVariant:light;
     }
   .price{
     text-align: right;
-    h3:before{
-      content: "$ ";
-      color: $lightOpacity;
-      font: bold 1em/1 Georgia, serif;
-      }
     }
   a.more-button, a.less-button{
     @include boxedUp;
