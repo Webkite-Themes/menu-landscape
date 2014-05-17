@@ -18,9 +18,9 @@ $colorVariant:light;
   max-width: 700px;
   margin: 0 auto;
   padding: $mainGutter;
-  font-family:"Open Sans";
+  font-family:'Open Sans', 'Arial', sans-serif;
   font-size: 12px;
-  font: 400 12px/normal "Open Sans";
+  font: 400 12px/normal 'Open Sans', 'Arial', sans-serif;
   a{color:$linkColor;
       text-decoration: none; 
     &:hover{color: $linkHover;}
@@ -68,7 +68,6 @@ $colorVariant:light;
       width: 100%;
       padding: 0;
       text-align:justify;
-      @include breakThat;
       }
     &.seventy{width:70%;}
     &.sixty{width:60%;}
@@ -95,6 +94,7 @@ $colorVariant:light;
         width:45%;
         min-width:80px;
         vertical-align:top;
+        text-align:right;
         }
       .inline-filter-button {display: inline-block; padding-bottom:$mainGutter/4;}
       b{font-weight: 700;}
@@ -134,9 +134,8 @@ $colorVariant:light;
     padding: 0 $mainGutter/2;
     font-size:12px;
     width:50%;
-    @include breakThat;
     &:nth-child(even){
-      border-left:1px solid $lightestOpacity;
+      border-left:1px dotted $lighterOpacity;
       margin-left:-1px;
       }
     h2 {
@@ -175,7 +174,7 @@ $colorVariant:light;
     border: 1px solid $lighterOpacity;
     display: inline-block;
     float: right;
-    font: 400 12px/1 "Open Sans";
+    font: 400 12px/1 'Open Sans', 'Arial', sans-serif;
     padding: $mainGutter/5 $mainGutter/2;
     margin-top: $mainGutter/2.5;
     text-align: center;
@@ -217,6 +216,7 @@ $colorVariant:light;
 
   .webkite-block li b{
     position: relative;
+    text-align:left;
     &.inline-filter-button + .facet-values{padding-top: $mainGutter/4;}
     > .webkite-toggle{
       @include boxedUp;
@@ -264,6 +264,7 @@ $colorVariant:light;
     max-height: 12.5em;
     overflow-y: auto;
     z-index: 2;
+    text-align:left;
     li {
       padding-bottom: 0;
       a{
